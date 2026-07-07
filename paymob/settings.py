@@ -60,9 +60,14 @@ SIMPLE_JWT = {
     'ROTATE_REFRESH_TOKENS': True,
 }
 
-# Acquiring bank API
+# Acquiring bank API (HTTP)
 BANK_ENDPOINT = 'http://localhost:8000/pay'
 BANK_TIMEOUT = 10
+
+# Acquiring bank TCP listener (query-string protocol) — same bank, socket transport
+BANK_TCP_HOST = '127.0.0.1'
+BANK_TCP_PORT = 9999
+BANK_TCP_TIMEOUT = 10
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
